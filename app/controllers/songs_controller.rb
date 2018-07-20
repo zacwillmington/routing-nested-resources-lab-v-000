@@ -1,6 +1,11 @@
 class SongsController < ApplicationController
   def index
       binding.pry
+      if params[:artist_id]
+          
+      else 
+
+      end
     @songs = Song.all
   end
 
