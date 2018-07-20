@@ -1676,3 +1676,6 @@ Completed 200 OK in 108450ms (Views: 22.5ms | ActiveRecord: 0.4ms)
   [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
 Processing by SongsController#show as HTML
   Parameters: {"id"=>"12345", "artist_id"=>"5"}
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND (12345) LIMIT 1[0m  [["artist_id", 5]]
+  [1m[35mSong Load (0.1ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND (12345) LIMIT 1  [["artist_id", 5]]
