@@ -1,3 +1,4 @@
+require "pry"
 describe "artists", type: :feature do
 
   before do
