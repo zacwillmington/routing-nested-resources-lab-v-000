@@ -3,7 +3,6 @@ require 'rails_helper'
 describe "artists", type: :feature do
 
   before do
-      binding.pry
     Artist.destroy_all
     Song.destroy_all
     @artist = Artist.create!(name: "Daft Punk")
