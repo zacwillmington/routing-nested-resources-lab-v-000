@@ -15,6 +15,7 @@ class SongsController < ApplicationController
       binding.pry
       @artist = Artist.find_by(:id => params[:artist_id])
       @song = @artist.songs.find_by(:id => params[:id])
+      binding.pry
       if @song
           binding.pry
       elsif @song = Song.find(params[:id])
