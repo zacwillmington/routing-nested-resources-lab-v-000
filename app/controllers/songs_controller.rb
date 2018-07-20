@@ -19,7 +19,7 @@ class SongsController < ApplicationController
           
       else
           flash[:alert] = "WOHW now cowboy. looks like this song doesn't exsist."
-          redirect_to artist_path @artist
+          redirect_to artist_songs_path @artist
       end
   end
 
