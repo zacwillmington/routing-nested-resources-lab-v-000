@@ -13,7 +13,7 @@ class SongsController < ApplicationController
   def show
       binding.pry
       @artist = Artist.find_by(:id => params[:artist_id])
-      @song = @artist.songs.find_by(params[:song_id])
+      @song = @artist.songs.find_by(params[:id])
       if @song
           binding.pry
       elsif @song = Song.find(params[:id])
