@@ -1,3 +1,5 @@
+require "pry"
+require 'rails_helper'
 describe "artists", type: :feature do
 
   before do
