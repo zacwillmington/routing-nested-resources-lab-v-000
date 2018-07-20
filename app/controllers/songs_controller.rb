@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   def index
+      binding.pry
        @artist = Artist.find_by(:id => params[:artist_id])
       if @artist
           @songs = @artist.songs
