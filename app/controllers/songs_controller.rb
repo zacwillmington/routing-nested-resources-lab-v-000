@@ -13,7 +13,7 @@ class SongsController < ApplicationController
   def show
       @artist = Artist.find_by(:id => params[:artist_id])
       @song = Song.find_by(:id => params[:id])
-      if @artist.songs.include?(@song)
+      if @artist && @artist.songs.include?(@song)
           
       elsif @song = Song.find_by(:id => params[:id])
           
