@@ -1679,3 +1679,7 @@ Processing by SongsController#show as HTML
   [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 5]]
   [1m[36mSong Load (0.1ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND (12345) LIMIT 1[0m  [["artist_id", 5]]
   [1m[35mSong Load (0.1ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND (12345) LIMIT 1  [["artist_id", 5]]
+  [1m[36mSong Load (0.4ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT 1[0m  [["artist_id", 5], ["id", 12345]]
+  Rendered songs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 73803ms (Views: 23.1ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
