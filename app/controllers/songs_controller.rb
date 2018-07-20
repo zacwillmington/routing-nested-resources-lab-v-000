@@ -1,13 +1,15 @@
 class SongsController < ApplicationController
   def index
-      binding.pry
        @artist = Artist.find_by(:id => params[:artist_id])
        binding.pry
       if @artist
+          binding.pry
           @songs = @artist.songs
       elsif @artist == nil 
+          binding.pry
           redirect_to artists_path
       else 
+          binding.pry
           @songs = Song.all
       end
   end
