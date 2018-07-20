@@ -14,9 +14,9 @@ class SongsController < ApplicationController
   def show
       binding.pry
       @artist = Artist.find_by(:id => params[:artist_id])
-      @song = @artist.songs.find_by(:id => params[:id])
+      @song = Song.find_by(:id => params[:id])
       binding.pry
-      if @song
+      if @artist.songs.include?(@song)
           binding.pry
       elsif @song = Song.find(params[:id])
           binding.pry
