@@ -12,16 +12,12 @@ class SongsController < ApplicationController
   end
 
   def show
-      binding.pry
       @artist = Artist.find_by(:id => params[:artist_id])
       @song = Song.find_by(:id => params[:id])
-      binding.pry
       if @artist.songs.include?(@song)
-          binding.pry
       elsif @song = Song.find_by(:id => params[:id])
-          binding.pry
+          
       else
-          binding.pry
           flash[:alert] = "WOHW now cowboy. looks like this song doesn't exsist."
           redirect_to artist_path @artist
       end
