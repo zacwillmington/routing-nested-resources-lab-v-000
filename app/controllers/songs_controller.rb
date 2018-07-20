@@ -8,7 +8,7 @@ class SongsController < ApplicationController
       elsif params[:artist_id] == nil 
           redirect_to artists_path
       else 
-          
+          @songs = Song.all
       end
   end
 
