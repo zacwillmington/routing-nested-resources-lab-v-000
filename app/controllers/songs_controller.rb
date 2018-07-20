@@ -20,6 +20,7 @@ class SongsController < ApplicationController
           binding.pry
       else
           binding.pry
+          flash[:notice] = "WOHW now cowboy. looks like this song doesn't exsist."
           redirect_to artist_path @artist
       end
   end
