@@ -5,8 +5,10 @@ class SongsController < ApplicationController
        binding.pry
       if @artist
           @songs = @artist.songs
-      elsif params[:artist_id].empty? 
+      elsif params[:artist_id] == nil 
           redirect_to artists_path
+      else 
+          
       end
   end
 
