@@ -1455,3 +1455,6 @@ Completed 302 Found in 247579ms (ActiveRecord: 0.2ms)
   [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
 Processing by SongsController#index as HTML
   [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" IS NULL LIMIT 1
+  Rendered songs/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9808ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
