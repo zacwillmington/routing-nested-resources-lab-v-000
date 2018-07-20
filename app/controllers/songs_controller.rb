@@ -19,6 +19,7 @@ class SongsController < ApplicationController
           
       else
           flash[:alert] = "WOHW now cowboy. looks like this song doesn't exsist."
+          binding.pry
           redirect_to artist_songs_path @artist
       end
   end
